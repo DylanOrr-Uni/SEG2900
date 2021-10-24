@@ -1,0 +1,21 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+    box-sizing: border-box;
+}
+
+:root {
+    /* Colour Theme */
+    --colour-primary: #66fcf1;
+    --colour-secondary: #45a29e;
+    --colour-neutral: #c5c6c7;
+    --colour-background-light: #1f2833;
+    --colour-background-dark: #0b0c10;
+}
+
+body {
+    background-color: var(--colour-background-light);
+    font-family: 'Roboto', sans-serif;
+    overflow-x: hidden;
+}
