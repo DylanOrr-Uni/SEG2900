@@ -20,6 +20,10 @@ nav a, i {
     font-size: 1.25rem;
 }
 
+nav i {
+    cursor: pointer;
+}
+
 .nav-list {
     display: flex;
     justify-content: space-around;
