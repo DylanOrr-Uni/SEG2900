@@ -11,11 +11,13 @@
     --colour-secondary: #45a29e;
     --colour-neutral: #c5c6c7;
     --colour-background-light: #1f2833;
-    --colour-background-dark: #0b0c10;
+    --colour-background-dark: #121212;
 }
 
 body {
     background-color: var(--colour-background-light);
     font-family: 'Roboto', sans-serif;
     overflow-x: hidden;
+    height: 100vh;
+    width: 100%;
 }
