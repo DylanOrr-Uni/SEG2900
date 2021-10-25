@@ -1,247 +1,187 @@
 <!DOCTYPE html>
+<!-- Shavon Thadani -->
 <html lang="en">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous" />
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" crossorigin="anonymous" />
-<title>Spectral Wrist</title>
-<link rel="icon" type="image/png" href="images/TabIconImg.png">
-<style>
-* {
-  box-sizing: border-box;
-}
-ul.line-separated
-    {
-        background-color: white;
-        padding: 0;
-        margin-left: 1em;
-    }
-    ul.line-separated li
-    {
-        background-color: #202525;
-        margin: 1px 0 0 0;
-        padding: 0;
-        list-style-type: none;
-    }
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-}
-.button1 {
+        <!-- Style Sheets -->
+        <link rel="stylesheet" href="../styles/main.css">
+        <link rel="stylesheet" href="../styles/navbar.css">
+        <link rel="stylesheet" href="../styles/footer.css">
+        <link rel="stylesheet" href="../styles/watchPage.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous" />
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" crossorigin="anonymous" />
 
-}
+        <!-- Javascript -->
+        <script src="../scripts/watch.js"></script>
+        <!-- Font Awesome Icons -->
+        <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.0.7/css/all.css">
 
-.button1:hover {
-  border: 2px solid #A0FCF1;
-}
-.btn-circle.btn-xl {
-    width: 60px;
-    height: 60px;
-    padding: 10px 16px;
-    border-radius: 35px;
-    font-size: 24px;
-    line-height: 1.33;
-}
+        <!-- Google Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 
-.btn-circle {
-    width: 15%;
-    height: 60px;
-    padding: 6px 0px;
-    border-radius: 15px;
-    text-align: center;
-    font-size: 12px;
-    line-height: 1.42857;
-}
-.columnleft {
-  float: left;
-  width: 80%;
-  padding: 10px;
-}
-.columnright {
-  float: right;
-  width: 20%;
-  padding: 10px;
-}
-
-.column{
-  float: left;
-  width: 50%;
-  padding: 10px;
-}
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-.line-1,  {
-    display:block;
-    font-size: 20px
-  }
-
-  .line-2 {
-    display: block;
-    font-size: 10px;
-  }
-}
-</style>
-</head>
-<body style="margin: 0; height: 100%; background-color: #202525">
-  <script>
-  var holloprice = 479;
-  var connectprice = 0;
-  function toggleHolloSize(Id)
-  {
-    document.getElementById("piccolo").style.border="2px solid #393D42";
-    document.getElementById("magnum").style.border="2px solid #393D42";
-    var selected = document.getElementById(Id);
-    selected.style.border="2px solid #A0FCF1";
-    if(Id=="piccolo"){
-      holloprice=479;
-    }
-    else if(Id=="magnum"){
-      holloprice=499;
-    }
-    let price = holloprice + connectprice;
-    let strprice= price.toString();
-    document.getElementById('buy now').innerText = "Buy Now\n" + "$" + strprice;
-  }
-  function toggleBandSize(Id)
-  {
-    document.getElementById("large").style.border="2px solid #393D42";
-    document.getElementById("regular").style.border="2px solid #393D42";
-    var selected = document.getElementById(Id);
-    selected.style.border="2px solid #A0FCF1";
-  }
-  function toggleColour(Id)
-  {
-    document.getElementById("blue").style.border="2px solid #393D42";
-    document.getElementById("green").style.border="2px solid #393D42";
-    document.getElementById("2blue").style.border="2px solid #393D42";
-    document.getElementById("yellow").style.border="2px solid #393D42";
-    document.getElementById("red").style.border="2px solid #393D42";
-    var selected = document.getElementById(Id);
-    selected.style.border="2px solid #A0FCF1";
-  }
-  function toggleConnectivity(Id)
-  {
-    document.getElementById("gps").style.border="2px solid #393D42";
-    document.getElementById("cell").style.border="2px solid #393D42";
-    var selected = document.getElementById(Id);
-    selected.style.border="2px solid #A0FCF1";
-    if(Id=="gps"){
-      connectprice=0;
-    }
-    else if(Id=="cell"){
-      connectprice=200;
-    }
-    let price = holloprice + connectprice;
-    let strprice= price.toString();
-    document.getElementById('buy now').innerText = "Buy Now\n" + "$" + strprice;
-  }
-
-  </script>
-  <div style="width: 100%;">
-          <div style="width: 80%; float: left; padding-right: 10px;">
-            <br />
-            <img src="https://i.ytimg.com/vi/Y_gLDlXUJKw/maxresdefault.jpg" alt="Watch photo" width="100%" height="100%" class="rounded">
-            </img>
-          </div>
-          <div style="margin-left: 80%; height: 700px; overflow-y: scroll; padding-right: 10px">
-            <h1 id="title" style="color:#A0FCF1; font-weight:500;">Spectral Wrist</h1>
-            <br />
-            <h2  style="color:#A0FCF1; font-weight:100;">Features</h2>
-            <ul class="line-separated">
-              <li style="color:white;">10x15cm Hollogram</li>
-              <li style="color:white;"><br />Touch Interface on your wrist</li>
-              <li style="color:white;"><br />Seemlessy intergrates with Spectral Vision</li>
-              <li style="color:white;"><br />Compatible with Spectral gloves for Hollotouch</li>
-              <li style="color:white;"><br />Heart Beat and Glucose Monitor</li>
-              <li style="color:white;"><br />Pedometer</li>
-              <li style="color:#202525;">.</li>
-          </ul>
-            <h2 style="color:#A0FCF1; font-weight:100;">Hollogram size</h2>
-            <button onclick="toggleHolloSize('magnum');"id="magnum"class="btn btn-outline-dark btn-block button1">
-            <div class="column">
-            <h3 style="color:white;">Magnum</h3>
-            <span class="line-2" style="color:white;">30% larger Hollogram</span>
+        <!-- Tab Bar Styling -->
+        <title>Watch</title>
+        <link rel="icon" type="image/png" href="images/TabIconImg.png">
+    </head>
+    <body style="background-color: var(--colour-background-light);">
+        <nav>
+            <div class="navbar">
+                <div class="logo">
+                    <a class="home-button" href="/index.html">Spectral</a>
+                </div>
+                <ul class="nav-list">
+                    <li class="nav-item"><a href="glasses.html">Vision</a></li>
+                    <li class="nav-item"><a href="display.html">Screen</a></li>
+                    <li class="nav-item"><a href="gloves.html">Touch</a></li>
+                    <li class="nav-item"><a href="sound.html">Sound</a></li>
+                    <li class="nav-item"><a href="#" style="color:var(--colour-primary);">Watch</a></li>
+                    <li class="nav-item"><a href="contact.html">Contact</a></li>
+                    <li class="nav-item"><i class="fas fa-cog"></i></li>
+                </ul>
+                <div class="menu">
+                    <div class="bar1"></div>
+                    <div class="bar2"></div>
+                    <div class="bar3"></div>
+                </div>
             </div>
-            <div class="column">
-            <span class="line-1" style="color:white;"><br> From $499</span>
-            </div>
-          </button>
-          <button id="piccolo" onclick="toggleHolloSize('piccolo');" style="border:2px solid #A0FCF1" class="btn btn-outline-dark btn-block button1">
-            <div class="column">
-            <h3 style="color:white;">Piccolo</h3>
-            <span class="line-2" style="color:white;">15% lighter</span>
-            </div>
-            <div class="column">
-            <span class="line-1" style="color:white;"><br> From $479</span>
-            </div>
-          </button>
-            <br />
+        </nav>
 
-          <h2 style="color:#A0FCF1; font-weight:100;">Band size</h2>
-          <button id="large" onclick="toggleBandSize('large');"class="btn btn-outline-dark btn-block button1">
-          <div class="column">
-          <h3 style="color:white;">Large</h3>
-          <span class="line-2" style="color:white;">Fits 140-220mm wrists</span>
-          </div>
-          <div class="column">
-          <br />
-          </div>
-        </button>
-        <button id="regular" onclick="toggleBandSize('regular');" style="border:2px solid #A0FCF1" class="btn btn-outline-dark btn-block button1">
-          <div class="column">
-          <h3 style="color:white;">Regular</h3>
-          <span class="line-2" style="color:white;">Fits 110-190mm wrists</span>
-          </div>
-          <div class="column">
-          <span class="line-1"><br></span>
-          </div>
-        </button>
-          <br />
-          <h2 style="color:#A0FCF1; font-weight:100;">Colours</h>
-          <br />
-          <button id="blue" onclick="toggleColour('blue');" style="border:2px solid #A0FCF1" type="button" class="btn btn-primary btn-circle btn-xl">
-          </button>
-          <button id="green" onclick="toggleColour('green');" type="button" class="btn btn-success btn-circle btn-xl">
-          </button>
-          <button id="2blue" onclick="toggleColour('2blue');" type="button" class="btn btn-info btn-circle btn-xl">
-          </button>
-          <button id="yellow" onclick="toggleColour('yellow');" type="button" class="btn btn-warning btn-circle btn-xl">
-          </button>
-          <button id="red" onclick="toggleColour('red');"type="button" class="btn btn-danger btn-circle btn-xl">
-          </button>
-            <br />
-          <h2 style="color:#A0FCF1; font-weight:100;" >Connectivity</h2>
-          <button id="gps" onclick="toggleConnectivity('gps');" style="border:2px solid #A0FCF1" class="btn btn-outline-dark button1">
-          <div class="column">
-          <h3 style="color:white;">GPS</h3>
-          <span class="line-2" style="color:white;">Make calls and send messages with your Spectral Vision nearby</span>
-          </div>
-          <div class="column">
-            <br />
-          </div>
-        </button>
-        <br />
-        <button id="cell" onclick="toggleConnectivity('cell');"class="btn btn-outline-dark button1">
-          <div class="column">
-          <h3 style="color:white;">GPS + Celluar</h3>
-          <span class="line-2" style="color:white;">Make calls and send messages with just your Spectral Wrist</span>
-          </span>
-          </div>
-          <div class="column">
-          <span class="line-1" style="color:white;"><br>+ $200</span>
-          </div>
-        </button>
-          </div>
-          <div style="margin-left: 80%;padding-right: 10px">
-            <div style="text-align:center;">
-              <br/>
-              <button onclick="finalprice();"id="buy now" class="btn btn-success btn-block button1">Buy Now <br />$479
+        <!-- Your content here -->
+        <div style="width: 100%;">
+                <div style="padding-right: 10px; padding-left: 10px;">
+                  <br />
+                  <img src="https://i.ytimg.com/vi/Y_gLDlXUJKw/maxresdefault.jpg" alt="Watch photo" width="100%" height="100%" class="rounded">
+                  </img>
+                </div>
+                <div style="padding-right: 10px;padding-left: 10px;">
+                  <br />
+                  <h2  style="color:var(--colour-primary); font-weight:100; font-size: 50px;">Features</h2>
+                  <ul class="line-separated">
+                    <li style="color:var(--colour-neutral); font-size: 20px;">10x15cm Hollogram</li>
+                    <li style="color:var(--colour-neutral); font-size: 20px;"><br />Touch Interface on your wrist</li>
+                    <li style="color:var(--colour-neutral); font-size: 20px;"><br />Seemlessy intergrates with Spectral Vision</li>
+                    <li style="color:var(--colour-neutral); font-size: 20px;"><br />Compatible with Spectral gloves for Hollotouch</li>
+                    <li style="color:var(--colour-neutral); font-size: 20px;"><br />Heart Beat and Glucose Monitor</li>
+                    <li style="color:var(--colour-neutral); font-size: 20px;"><br />Pedometer</li>
+                    <li style="color:#202525;">.</li>
+                </ul>
+                <div class="columnleft">
+                  <h2 style="color:#A0FCF1; font-weight:100; font-size: 50px;">Hollogram size</h2>
+                  <button onclick="toggleHolloSize('magnum');"id="magnum"class="btn btn-outline-dark btn-block button1">
+                  <div class="column">
+                  <h3 style="color:var(--colour-neutral);font-size: 40px; ">Magnum</h3>
+                  <span class="line-2" style="color:var(--colour-neutral);font-size: 15px;">30% larger Hollogram</span>
+                  </div>
+                  <div class="column">
+                  <span class="line-1" style="color:var(--colour-neutral);font-size: 20px;"><br> From $499</span>
+                  </div>
+                </button>
+                <button id="piccolo" onclick="toggleHolloSize('piccolo');" style="border:2px solid #45a29e" class="btn btn-outline-dark btn-block button1">
+                  <div class="column">
+                  <h3 style="color:var(--colour-neutral);font-size: 40px;">Piccolo</h3>
+                  <span class="line-2" style="color:var(--colour-neutral);font-size: 15px;">15% lighter</span>
+                  </div>
+                  <div class="column">
+                  <span class="line-1" style="color:var(--colour-neutral);font-size: 20px;"><br> From $479</span>
+                  </div>
+                </button>
+                  <br />
+                  <br />
+                  <h2 style="color:#A0FCF1; font-weight:100; font-size: 50px;">Colours</h>
+                  <br />
+                  <button id="blue" onclick="toggleColour('blue');" style="border:6px solid #45a29e" type="button" class="btn btn-primary btn-circle btn-xl">
+                  </button>
+                  <button id="green" onclick="toggleColour('green');" type="button" class="btn btn-success btn-circle btn-xl">
+                  </button>
+                  <button id="yellow" onclick="toggleColour('yellow');" type="button" class="btn btn-warning btn-circle btn-xl">
+                  </button>
+                  <button id="red" onclick="toggleColour('red');"type="button" class="btn btn-danger btn-circle btn-xl">
+                  </button>
+                    <br />
+                </div>
+                <div class="columnright">
+                  <h2 style="color:#A0FCF1; font-weight:100; font-size: 50px;">Band size</h2>
+                  <button id="large" onclick="toggleBandSize('large');"class="btn btn-outline-dark btn-block button1">
+                  <div class="column">
+                  <h3 style="color:var(--colour-neutral);font-size: 40px;">Large</h3>
+                  <span class="line-2" style="color:var(--colour-neutral);font-size: 15px;">Fits 140-220mm Watchs</span>
+                  </div>
+                  <div class="column">
+                  <br />
+                  </div>
+                </button>
+                <button id="regular" onclick="toggleBandSize('regular');" style="border:2px solid #45a29e" class="btn btn-outline-dark btn-block button1">
+                  <div class="column">
+                  <h3 style="color:var(--colour-neutral);font-size: 40px;">Regular</h3>
+                  <span class="line-2" style="color:var(--colour-neutral);font-size: 15px;">Fits 110-190mm Watchs</span>
+                  </div>
+                  <div class="column">
+                  <span class="line-1"><br></span>
+                  </div>
+                </button>
+                <br />
+                <br />
+                <h2 style="color:#A0FCF1; font-weight:100; font-size: 50px;" >Connectivity</h2>
+                <button id="gps" onclick="toggleConnectivity('gps');" style="border:2px solid #45a29e" class="btn btn-outline-dark btn-block button1">
+                <div class="column">
+                <h3 style="color:var(--colour-neutral); font-size: 40px;">GPS</h3>
+                <span class="line-2" style="color:var(--colour-neutral);font-size: 15px;">Make calls and send messages with your Spectral Vision nearby</span>
+                </div>
+                <div class="column">
+                  <br />
+                </div>
               </button>
-            </div>
-            </div>
-      </div>
+              <br />
+              <button id="cell" onclick="toggleConnectivity('cell');"class="btn btn-outline-dark btn-block button1">
+                <div class="column">
+                <h3 style="color:var(--colour-neutral); font-size: 40px;">GPS + Celluar</h3>
+                <span class="line-2" style="color:var(--colour-neutral);font-size:15px;">Make calls and send messages with just your Spectral Watch</span>
+                </span>
+                </div>
+                <div class="column">
+                <span class="line-1" style="color:var(--colour-neutral);font-size:15px;"><br>+ $200</span>
+                <br/>
+                <br/>
+                </div>
+              </button>
+                </div>
 
-</body>
+
+
+
+
+                </div>
+                <div style="margin:30px; margin-top:20px;margin-bottom:20px">
+                  <div style="text-align:center;">
+
+                    <button style="border: 2px solid var(--colour-secondary);font-size:30px;"onclick="finalprice();"id="buy now" class="btn btn-outline-dark btn-block button1">  <span class="line-2" style="color:var(--colour-primary);font-size: 30px;">Buy Now <br />$479</span>
+                    </button>
+                  </div>
+                  </div>
+            </div>
+
+      </body>
+        <footer>
+            <ul class="footer-list">
+                <li class="footer-item"><a href="/pages/gloves.html">Vision</a></li>
+                <li class="footer-item"><p>|</p></li>
+                <li class="footer-item"><a href="/pages/display.html">Screen</a></li>
+                <li class="footer-item"><p>|</p></li>
+                <li class="footer-item"><a href="/pages/gloves.html">Touch</a></li>
+                <li class="footer-item"><p>|</p></li>
+                <li class="footer-item"><a href="/pages/speakers.html">Sound</a></li>
+                <li class="footer-item"><p>|</p></li>
+                <li class="footer-item"><a href="/pages/watch.html">Watch</a></li>
+                <li class="footer-item"><p>|</p></li>
+                <li class="footer-item"><a href="/pages/contact.html">Contact</a></li>
+                <li class="footer-item"><p>|</p></li>
+                <li class="footer-item"><a href="/pages/settings.html">Settings</a></li>
+            </ul>
+        </footer>
+    </body>
 </html>
