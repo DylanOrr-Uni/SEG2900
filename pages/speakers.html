@@ -10,7 +10,8 @@
         <link rel="stylesheet" href="../styles/main.css">
         <link rel="stylesheet" href="../styles/navbar.css">
         <link rel="stylesheet" href="../styles/footer.css">
-        <link rel="stylesheet" href="../styles/watchPage.css">
+        <link rel="stylesheet" href="../styles/speakersPage.css">
+
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous" />
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" crossorigin="anonymous" />
 
@@ -28,7 +29,8 @@
         <title>Watch</title>
         <link rel="icon" type="image/png" href="images/TabIconImg.png">
     </head>
-    <body style="background-color: var(--colour-background-light);">
+    <body style="background-color: black">
+        <header>
         <nav>
             <div class="navbar">
                 <div class="logo">
@@ -38,132 +40,56 @@
                     <li class="nav-item"><a href="glasses.html">Vision</a></li>
                     <li class="nav-item"><a href="display.html">Screen</a></li>
                     <li class="nav-item"><a href="gloves.html">Touch</a></li>
-                    <li class="nav-item"><a href="#" style="color:var(--colour-primary);">Sound</a></li>
+                    <li class="nav-item"><a href="speakers.html">Sound</a></li>
                     <li class="nav-item"><a href="watch.html">Watch</a></li>
                     <li class="nav-item"><a href="contact.html">Contact</a></li>
                     <li class="nav-item"><i class="fas fa-cog"></i></li>
                 </ul>
-                <div class="menu">
-                    <div class="bar1"></div>
-                    <div class="bar2"></div>
-                    <div class="bar3"></div>
-                </div>
+
             </div>
         </nav>
+        </header>
 
         <!-- Your content here -->
-        <div style="width: 100%;">
+        <main>
+        <div class= "content" >
                 <div style="padding-right: 10px; padding-left: 10px;">
                   <br />
-                  <img src="headphones.jpg" alt="speakers photo" width="100%" height="100%" class="rounded">
+                  <img src="../images/spectral_buds_1.jpg" alt="speakers photo" width="100%" height="100%">
                   </img>
+      
+              
                 </div>
-                <div style="padding-right: 10px;padding-left: 10px;">
+                <div class ="feat">
                   <br />
-                  <h2  style="color:var(--colour-primary); font-weight:100; font-size: 50px;">Features</h2>
-                  <ul class="line-separated">
-                    <li style="color:var(--colour-neutral); font-size: 20px;">Great confort with their small size and shape to use them for long periods</li>
-                    <li style="color:var(--colour-neutral); font-size: 20px;"><br />IP68 Water protection rating</li>
-                    <li style="color:var(--colour-neutral); font-size: 20px;"><br />Use it with your spectral glasses to get the most immersive experience  </li>
-                    <li style="color:var(--colour-neutral); font-size: 20px;"><br />Responds to motion controls performed by the spectral gloves</li>
-                    <li style="color:var(--colour-neutral); font-size: 20px;"><br />Noise cancellation that adapts automatically to your environment</li>
-                    <li style="color:var(--colour-neutral); font-size: 20px;"><br />Alexa and google assistant compatible</li>
-                    <li style="color:#202525;">.</li>
-                </ul>
-                <div class="columnleft">
-                  <h2 style="color:#A0FCF1; font-weight:100; font-size: 50px;">Active noise cancellation</h2>
-                  <button onclick="toggleHolloSize('magnum');"id="magnum"class="btn btn-outline-dark btn-block button1">
-                  <div class="column">
-                  <h3 style="color:var(--colour-neutral);font-size: 40px; ">Titanium</h3>
-                  <span class="line-2" style="color:var(--colour-neutral);font-size: 15px;"></span>
-                  </div>
-                  <div class="column">
-                  <span class="line-1" style="color:var(--colour-neutral);font-size: 20px;"><br> From $299</span>
-                  </div>
-                </button>
-                <button id="piccolo" onclick="toggleHolloSize('piccolo');" style="border:2px solid #45a29e" class="btn btn-outline-dark btn-block button1">
-                  <div class="column">
-                  <h3 style="color:var(--colour-neutral);font-size: 40px;">Marble white</h3>
-                  <span class="line-2" style="color:var(--colour-neutral);font-size: 15px;"></span>
-                  </div>
-                  <div class="column">
-                  <span class="line-1" style="color:var(--colour-neutral);font-size: 20px;"><br> From $229</span>
-                  </div>
-                </button>
-                  <br />
-                  <br />
-                  <h2 style="color:#A0FCF1; font-weight:100; font-size: 50px;">Colours</h>
-                  <br />
-                  <button id="blue" onclick="toggleColour('blue');" style="border:6px solid #45a29e" type="button" class="btn btn-primary btn-circle btn-xl">
-                  </button>
-                  <button id="green" onclick="toggleColour('green');" type="button" class="btn btn-success btn-circle btn-xl">
-                  </button>
-                  <button id="yellow" onclick="toggleColour('yellow');" type="button" class="btn btn-warning btn-circle btn-xl">
-                  </button>
-                  <button id="red" onclick="toggleColour('red');"type="button" class="btn btn-danger btn-circle btn-xl">
-                  </button>
-                    <br />
-                </div>
-                <div class="columnright">
-                  <h2 style="color:#A0FCF1; font-weight:100; font-size: 50px;">Charging case</h2>
-                  <button id="large" onclick="toggleBandSize('large');"class="btn btn-outline-dark btn-block button1">
-                  <div class="column">
-                  <h3 style="color:var(--colour-neutral);font-size: 40px;">Wireless case</h3>
-                  <span class="line-2" style="color:var(--colour-neutral);font-size: 15px;">Wirelessly charge 70% of the battery in 10 mins </span>
-                  </div>
-                  <div class="column">
-                  <br />
-                  </div>
-                </button>
-                <button id="regular" onclick="toggleBandSize('regular');" style="border:2px solid #45a29e" class="btn btn-outline-dark btn-block button1">
-                  <div class="column">
-                  <h3 style="color:var(--colour-neutral);font-size: 40px;">Fast charging case</h3>
-                  <span class="line-2" style="color:var(--colour-neutral);font-size: 15px;">Full battery in 20 mins with wired charge </span>
-                  </div>
-                  <div class="column">
-                  <span class="line-1"><br></span>
-                  </div>
-                </button>
-                <br />
-                <br />
-                <h2 style="color:#A0FCF1; font-weight:100; font-size: 50px;" >Connectivity</h2>
-                <button id="gps" onclick="toggleConnectivity('gps');" style="border:2px solid #45a29e" class="btn btn-outline-dark btn-block button1">
-                <div class="column">
-                <h3 style="color:var(--colour-neutral); font-size: 40px;">Passive noise cancellation</h3>
-                <span class="line-2" style="color:var(--colour-neutral);font-size: 15px;">Great noise supress due to the their shape</span>
-                </div>
-                <div class="column">
-                  <br />
-                </div>
-              </button>
-              <br />
-              <button id="cell" onclick="toggleConnectivity('cell');"class="btn btn-outline-dark btn-block button1">
-                <div class="column">
-                <h3 style="color:var(--colour-neutral); font-size: 40px;">Active noise cancellation</h3>
-                <span class="line-2" style="color:var(--colour-neutral);font-size:15px;">Add active noise cancellation for the best experience</span>
-                </span>
-                </div>
-                <div class="column">
-                <span class="line-1" style="color:var(--colour-neutral);font-size:15px;"><br>+ $70</span>
-                <br/>
-                <br/>
-                </div>
-              </button>
+                  <ul>
+                    <li>Great comfort with enlarged tips to use them for long periods</li>
+                    <br/><br/>
+                    <li>IP68 Water protection rating</li>
+                    <br/><br/>
+                    <li>Use it with your spectral glasses to get the most immersive experience  </li>
+                    <br/><br/>
+                    <li>Noise cancellation that adapts automatically to your environment</li>
+                    <br/><br/>
+                    <li>Alexa and google assistant compatible</li>
+                    
+                  </ul>
                 </div>
 
-
-
-
-
-                </div>
-                <div style="margin:30px; margin-top:20px;margin-bottom:20px">
                   <div style="text-align:center;">
-
-                    <button style="border: 2px solid var(--colour-secondary);font-size:30px;"onclick="finalprice();"id="buy now" class="btn btn-outline-dark btn-block button1">  <span class="line-2" style="color:var(--colour-primary);font-size: 30px;">Buy Now <br />$229</span>
+                    <form action= "/soundacnhtml/active_cancelation.html class="link" style = "color: black"></form>
+                    <button style="border: 2px solid var(--colour-primary);font-size:30px;"onclick="finalprice();"id="buy now" class="btn btn-outline-dark btn-block button1">  <span class="line-2" style="color:var(--colour-primary);font-size: 30px;">Add Active Noise Cancelation<br />+$70</span>
                     </button>
+                  </form>
+
+                      <button style="border: 2px solid var(--colour-primary);font-size:30px;"onclick="finalprice();"id="buy now" class="btn btn-outline-dark btn-block button1">  <span class="line-2" style="color:var(--colour-primary);font-size: 30px;">Buy Now <br />$229</span>
+                      </button>
+                    
+                    
                   </div>
                   </div>
             </div>
+          </main>
 
       </body>
         <footer>
