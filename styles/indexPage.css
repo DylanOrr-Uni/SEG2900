@@ -1,0 +1,273 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+/* Buttons */
+.primary {
+    background-color: var(--colour-primary);
+    border-radius: 18px;
+    color: white;
+    transition: transform 0.25s ease;
+}
+
+.secondary {
+    position: relative;
+    border: 3px solid var(--colour-secondary);
+    background: transparent;
+    border-radius: 18px;
+    background: transparent;
+    color: var(--colour-secondary);
+    transition: all 0.25s ease;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    white-space: pre;
+}
+
+.buttons button {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+    min-height: 40px;
+    min-width: max-content;
+    padding: 1vh 2vw;
+}
+
+.secondary:hover, .landing .primary:hover, .productCardsSection .primary:hover {
+    transform: translate(-5px, -5px);
+    transition: all ease 0.25s;
+}
+
+.secondary::after, .primary::after {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    opacity: 0.1;
+    display: none;
+    border-radius: 18px;
+}
+
+.primary:hover::after, .secondary:hover::after {
+    display: block;
+}
+
+/* Content */
+/* Feature Section */
+
+.landing {
+    width: 100%;
+    height: 100vh;
+    padding-top: 35vh;
+    padding-bottom: 75vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.feature {
+    position: relative;
+    min-width: max-content;
+    margin-top: 20vw;
+    padding-bottom: 20px;
+    border: 5px #EFEFEF solid;
+    border-radius: 5px;
+    background-color: #EFEFEF;
+    filter: drop-shadow(0px 0px 3px rgba(0,0,0,0.25));
+    transition: all ease 0.25s;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.feature:hover {
+    transform: scale(102%);
+    transition: transform ease 0.25s;
+}
+
+.feature:hover > .bigGlass {
+    transform: scale(102%);
+    overflow: hidden;
+    transition: transform ease 0.3s;
+}
+
+.bigGlass {
+    width: 80vw;
+    border-radius: 5px;
+    padding-top: 30px;
+    height: 80vh;
+    object-fit: cover;
+    transition: transform ease 0.25s;
+}
+
+.landing h1 {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 40px;
+    font-size: 3rem;
+    z-index: 10;
+}
+
+.feature .buttons button {
+    height: 40px;
+    width: 8vw;
+    margin: 10px 5px;
+    filter: drop-shadow(10px 5px 4px rgba(0,0,0,0.25));
+    cursor: pointer;
+}
+
+.glassesTitle {
+    position: absolute;
+    left: 50%;
+    bottom: 15%;
+    transform: translateX(-50%);
+    font-size: 2rem;
+}
+
+/* Product Cards */
+
+.productCardsSection {
+    position: relative;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.productCard {
+    max-width: max-content;
+    padding: 10px 10px 55px 10px;
+    background: var(--colour-background-light);
+    background: radial-gradient(circle, rgb(56, 69, 85) 0%, rgba(31,40,51,1) 80%);
+    border-radius: 25px;
+    filter: drop-shadow(10px 5px 4px rgba(0,0,0,0.25));
+    margin: 50px;
+    transition: transform ease 0.25s;
+}
+
+.productCard:hover {
+    transform: scale(105%);
+    transition: transform ease 0.25s;
+}
+
+.productCard:hover > .productCardTitle {
+    transform: translate(-70px, -3px);
+    filter: drop-shadow(10px 5px 4px rgba(0,0,0,0.25));
+    transition: all ease 0.25s;
+}
+
+.productCardTitle {
+    color: white;
+    position: absolute;
+    transform: translate(-50%, 10%);
+    top: 66%;
+    left: 50%;
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+    font-size: 2.25rem;
+    transition: all ease 0.25s; 
+}
+
+.productCard .buttons {
+    margin-top: 55px;
+}
+
+.productCard .buttons button {
+    margin: 10px 5px;
+    filter: drop-shadow(1px 1px 4px rgba(255, 255, 255, 0.25));
+    cursor: pointer;
+}
+
+
+.productCardsSection img {
+    width: 400px;
+    height: 320px;
+    object-fit: cover;
+    transform: scale(90%); 
+}
+
+.watch img {
+    border-radius: 25px;
+    border: solid white 5px;   
+}
+
+.productCardsHeader {
+    display: inline-flex;
+    color: black;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 3rem;
+    margin-top: 10vh;
+}
+
+.cards {
+    margin-top: 25vh;
+    width: 90vw;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* Meet the team button */
+.meetTheTeam {
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap ;
+    margin-top: 15vh;
+    margin-bottom: 25vh;
+}
+
+.meetTheTeam p, .meetTheTeam button {
+    position: relative;
+    font-size: 2rem;
+    margin: 10px;
+}
+
+.meetTheTeam .teamButton {
+    pointer-events: visible;
+    cursor: pointer;
+    font-size: 1.5rem;
+    transition: 0.25s ease all;
+    text-decoration: none;
+}
+
+.meetTheTeam .teamButton:hover {
+    transform: scale(105%);
+    transition: 0.25s ease all;
+}
+
+.meetTheTeam .teamButton:hover:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    opacity: 0.10;
+}
+
+.meetTheTeam button {
+    display: flex;
+    align-items: center;
+    pointer-events: none;
+}
+
+.line {
+    margin-left: 20vw;
+    margin-right: 20vw;
+    width: 60vw;
+    background-color: var(--colour-background-light);
+    height: 1px;
+    opacity: 50%;
+}

@@ -7,7 +7,7 @@
 
 :root {
     /* Colour Theme */
-    --colour-primary: #66fcf1;
+    --colour-primary: #275efe;
     --colour-secondary: #45a29e;
     --colour-neutral: #c5c6c7;
     --colour-background-light: #1f2833;
@@ -15,7 +15,7 @@
 }
 
 body {
-    background-color: var(--colour-background-light);
+    /* background-color: var(--colour-background-light); */
     font-family: 'Roboto', sans-serif;
     overflow-x: hidden;
     height: 100vh;

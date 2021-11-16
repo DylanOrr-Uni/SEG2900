@@ -1,6 +1,11 @@
 @import "main.css";
 @import "animations.css";
 
+nav {
+    background-color: var(--colour-background-light);
+    filter: drop-shadow(10px 5px 4px rgba(0,0,0,0.25));
+}
+
 .navbar {
     display: flex;
     justify-content: space-around;
@@ -12,6 +17,12 @@
 .logo {
     letter-spacing: 5px;
     text-transform: uppercase;
+    transition: all ease 0.25s;
+}
+
+.logo:hover {
+    letter-spacing: 6px;
+    transition: all ease 0.25s;
 }
 
 nav a, i {
