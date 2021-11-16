@@ -45,7 +45,14 @@ nav i {
 }
 
 .nav-item {
-    margin: 10px;
+    padding: 5px 10px;
+    border-radius: 15px;
+    transition: 0.25s ease all;
+}
+
+.nav-item:hover {
+    background-color: rgba(255, 255, 255, 0.25);
+    transition: 0.25s ease all;
 }
 
 .menu {
