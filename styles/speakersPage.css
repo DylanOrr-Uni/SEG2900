@@ -23,6 +23,21 @@
     text-decoration: none;
     font-size: 2.5em;
 }
+.gold ul{
+  margin-left: 2em;
+  padding:0;
+}
+
+
+.gold li
+{
+  margin-left: 20px;
+  padding: 0;
+  list-style-type: disc;
+  color:rgba(255, 255, 255,1);
+  text-decoration: none;
+  font-size: 2.5em;
+}
 
 
 .button1 {
