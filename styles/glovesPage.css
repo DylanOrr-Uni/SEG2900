@@ -7,7 +7,7 @@ h1 {
 }
 .box {
     background-image: url(../FilesNeededForGloveshtml/motion\ gloves.jpg);
-    height: 900px;
+    height: 90px;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -17,13 +17,13 @@ h1 {
     color: #c5c6c7;
     font-size: 44px;
     text-shadow: 1px 1px 2px black, 0 0 25px #66FCF1, 0 0 5px #45a29e;
-    
+
 }
 
 .linkshome {
     text-align:center;
     font-size: 40px;
-    
+
 }
 #price {
     display: inline-block;
@@ -108,7 +108,7 @@ html {
 }
 
 #pro {
-    
+
     display: inline-block;
     border: 2px solid #c5c6c7;
     padding: 20px 25px;
@@ -124,7 +124,7 @@ html {
 }
 #motionall {
     color: #c5c6c7;
-    
+
 }
 
 #motionheader {
