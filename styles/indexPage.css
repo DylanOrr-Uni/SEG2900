@@ -1,70 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
-/* Buttons */
-.primary {
-    background-color: var(--colour-primary);
-    border-radius: 18px;
-    color: white;
-    transition: transform 0.25s ease;
-}
-
-.secondary {
-    position: relative;
-    border: 3px solid var(--colour-secondary);
-    background: transparent;
-    border-radius: 18px;
-    background: transparent;
-    color: var(--colour-secondary);
-    transition: all 0.25s ease;
-}
-
-.buttons {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    white-space: pre;
-}
-
-.buttons button {
-    font-family: 'Roboto', sans-serif;
-    font-size: 1rem;
-    min-height: 40px;
-    min-width: max-content;
-    padding: 1vh 2vw;
-}
-
-.secondary:hover, .landing .primary:hover, .productCardsSection .primary:hover {
-    transform: translate(-5px, -5px);
-    transition: all ease 0.25s;
-}
-
-.secondary::after, .primary::after {
-    content: "";
-    display: block;
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: white;
-    opacity: 0.1;
-    display: none;
-    border-radius: 18px;
-}
-
-.primary:hover::after, .secondary:hover::after {
-    display: block;
-}
-
 /* Content */
 /* Feature Section */
 
 .landing {
     width: 100%;
-    height: 100vh;
-    padding-top: 35vh;
-    padding-bottom: 75vh;
+    margin-top: 5vh;
+    margin-bottom: 10vh;
     overflow: hidden;
     display: flex;
     justify-content: center;
@@ -72,18 +14,17 @@
 }
 
 .feature {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
     position: relative;
     min-width: max-content;
-    margin-top: 20vw;
-    padding-bottom: 20px;
+    margin: 20px;
     border: 5px #EFEFEF solid;
-    border-radius: 5px;
+    border-radius: 10px;
     background-color: #EFEFEF;
     filter: drop-shadow(0px 0px 3px rgba(0,0,0,0.25));
     transition: all ease 0.25s;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
 }
 
 .feature:hover {
@@ -100,35 +41,44 @@
 .bigGlass {
     width: 80vw;
     border-radius: 5px;
-    padding-top: 30px;
+    margin-bottom: 80px;
     height: 80vh;
     object-fit: cover;
     transition: transform ease 0.25s;
 }
 
 .landing h1 {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    top: 40px;
+    margin-top: 40px;
     font-size: 3rem;
     z-index: 10;
-}
-
-.feature .buttons button {
-    height: 40px;
-    width: 8vw;
-    margin: 10px 5px;
-    filter: drop-shadow(10px 5px 4px rgba(0,0,0,0.25));
-    cursor: pointer;
 }
 
 .glassesTitle {
     position: absolute;
     left: 50%;
-    bottom: 15%;
+    bottom: 12%;
     transform: translateX(-50%);
     font-size: 2rem;
+}
+
+.feature .buttons {
+    position: absolute;
+    bottom: 2%;
+}
+
+.feature .buttons button {
+    height: 40px;
+    width: 8vw;
+    margin: 15px 5px;
+    filter: drop-shadow(10px 5px 4px rgba(0,0,0,0.25));
+    cursor: pointer;
+}
+
+.landing .sub {
+    margin-top: 15px;
+    z-index: 10;
+    font-size: 1.5rem;
+    opacity: 80%;
 }
 
 /* Product Cards */

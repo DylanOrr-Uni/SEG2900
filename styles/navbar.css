@@ -4,6 +4,7 @@
 nav {
     background-color: var(--colour-background-light);
     filter: drop-shadow(10px 5px 4px rgba(0,0,0,0.25));
+    z-index: 100;
 }
 
 .navbar {
@@ -55,6 +56,14 @@ nav i {
     transition: 0.25s ease all;
 }
 
+.nav-item-active {
+    background-color: rgba(255, 255, 255, 0.25);
+}
+
+.nav-item-active:hover {
+    background-color: rgba(255, 255, 255, 0.35);
+}
+
 .menu {
     display: none;
     cursor: pointer;
@@ -81,7 +90,7 @@ nav i {
     }
 
     .nav-list {
-        position: absolute;
+        position: fixed;
         top: 10vh;
         right: 0px;
         width: 35%;
@@ -92,13 +101,13 @@ nav i {
         margin-right: 0px;
         padding-bottom: 20vh;
         transform: translateX(100%);
-        
+        background-color: white;
     }
     
     .nav-item {
         opacity: 0;
     }
-    
+
     .nav-inactive {
         transition: transform 0.25s ease-out;
     }

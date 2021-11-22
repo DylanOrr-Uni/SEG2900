@@ -2,7 +2,6 @@ const navbar = document.querySelector('.nav-list');
 const navMenu = document.querySelector('.menu');
 const navLinks = document.querySelectorAll('.nav-item');
 
-
 navMenu.addEventListener('click', ()=> {
     navbar.classList.toggle('nav-active');
     navMenu.classList.toggle('toggle');
